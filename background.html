@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>width & height</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>background-position 으로 위치 지정(x축, y축) => top left / 100px 100px</p>
+  <p>background-size => cover 는 이미지가 넓은 부분에 맞춰짐 / => contain 은 짧은 부분에 맞춰짐 </p>
+  <p>background-attachment => scroll or fixed </p>
+</div>
+<div>
+  <div class="div-ex1">
+    <div></div>
+  </div>
+  <div class="div-ex2">
+    <div></div>
+  </div>
+</div>
+</body>
+<style>
+  body {
+    height: 3000px;
+  }
+  .div-ex1 > div {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    background-image: url("./images/heart.svg");
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+  }
+  .div-ex2 {
+    height: 800px;
+    background-image: url("./images/heart.svg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+</style>
+</html>

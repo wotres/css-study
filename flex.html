@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>flex</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>flex-grow 는 증가비율 => 남은 여백을 어떤 비율로 가져갈것인가 ex) 1:2:1 로 가져가겠다.</p>
+  <p>flex-basis 로 내부 컨텐츠 너비를 정함 </p>
+</div>
+<div>
+  <div class="div-ex1">
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+  </div>
+  <div class="div-ex2">
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+  </div>
+  <div class="div-ex3">
+    <div>div1div1</div>
+    <div>div2div2div2</div>
+    <div>div3</div>
+  </div>
+  <div class="div-ex4">
+    <div>div1div1</div>
+    <div>div2div2div2</div>
+    <div>div3</div>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex1 {
+    display: flex;
+    /*flex-direction: column;*/
+  }
+
+  .div-ex1 div {
+    min-width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+
+  .div-ex2 {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+  }
+
+  .div-ex2 div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+
+  .div-ex3 {
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    /*flex-direction: column;*/
+  }
+
+  .div-ex3 div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+
+  .div-ex3 div:first-child {
+    flex-grow: 1;
+  }
+
+  .div-ex3 div:nth-child(2) {
+    flex-grow: 1;
+  }
+
+  .div-ex3 div:last-child {
+    flex-grow: 2;
+  }
+
+  .div-ex4 {
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    /*flex-direction: column;*/
+  }
+
+  .div-ex4 div {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+
+  .div-ex4 div:first-child {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .div-ex4 div:nth-child(2) {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .div-ex4 div:last-child {
+    flex-grow: 2;
+    flex-basis: 0;
+  }
+</style>
+</html>

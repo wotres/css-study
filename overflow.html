@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>width & height</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>넘치는 영역 제어 hidden or auto or scroll</p>
+</div>
+<div>
+  <div class="div-ex">
+    <div>div</div>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex {
+    height: 200px;
+    width: 100px;
+    overflow: hidden;
+    background-color: antiquewhite;
+  }
+  .div-ex > div {
+    height: 100px;
+    width: 200px;
+    background-color: aqua;
+  }
+</style>
+</html>

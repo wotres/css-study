@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>border & box-sizing</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>box-sizing: border-box => 요소의 내용과 padding 과 border 크기로 계산</p>
+</div>
+<div>
+  <div class="div-ex1">
+    <div>div</div>
+  </div>
+  <div class="div-ex2">
+    <div>div</div>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex1 {
+    background-color: antiquewhite;
+  }
+  .div-ex1 > div {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: aqua;
+  }
+  .div-ex2 {
+    background-color: antiquewhite;
+  }
+  .div-ex2 > div {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: aqua;
+    box-sizing: border-box;
+  }
+</style>
+</html>

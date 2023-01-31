@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>position</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p></p>
+</div>
+<div>
+  <div class="div-ex">
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: antiquewhite;
+  }
+  .div-ex div:first-child {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+  .div-ex div:nth-child(2) {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: 40px;
+    left: 60px;
+    background-color: aqua;
+  }
+  .div-ex div:last-child {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: aqua;
+  }
+</style>
+</html>

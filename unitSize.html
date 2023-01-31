@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css 단위</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>em 은 요소 폰트의 배수(default 16px => 50em 은 16 * 50 = 800px) </p>
+</div>
+<div>
+  <div class="div-ex1">
+    <div>div</div>
+  </div>
+</div>
+<div>
+  <div class="div-ex2">
+    <div>div</div>
+  </div>
+</div>
+<div>
+  <div class="div-ex3">
+    <div>div</div>
+  </div>
+</div>
+<div>
+  <div class="div-ex4">
+    <div>div</div>
+  </div>
+</div>
+<div>
+  <div class="div-ex5">
+    <div>div</div>
+  </div>
+</div>
+</body>
+<style>
+  html {
+    font-size: 16px;
+  }
+
+  .div-ex1 {
+    height: 100px;
+    width: 500px;
+    background-color: antiquewhite;
+  }
+
+  .div-ex1 > div {
+    width: 50%;
+    background-color: aqua;
+  }
+
+  .div-ex2 {
+    height: 100px;
+    width: 500px;
+    background-color: antiquewhite;
+  }
+
+  .div-ex2 > div {
+    width: 50em;
+    background-color: aqua;
+  }
+
+  .div-ex3 {
+    height: 100px;
+    width: 500px;
+    font-size: 10px;
+    background-color: antiquewhite;
+  }
+
+  .div-ex3 > div {
+    width: 50em;
+    background-color: aqua;
+  }
+
+  .div-ex4 {
+    height: 100px;
+    width: 500px;
+    font-size: 10px;
+    background-color: antiquewhite;
+  }
+
+  .div-ex4 > div {
+    width: 50rem;
+    background-color: aqua;
+  }
+
+  .div-ex5 {
+    height: 100px;
+    width: 500px;
+    background-color: antiquewhite;
+  }
+
+  .div-ex5 > div {
+    width: 50vw;
+    height: 20vh;
+    background-color: aqua;
+  }
+</style>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>width & height</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>4개: top right bottom left</p>
+  <p>3개: top (right, left) bottom</p>
+  <p>2개: (top, bottom) (right, left)</p>
+  <p>auto </p>
+</div>
+<div>
+  <div class="div-ex">
+    <div>div</div>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex {
+    background-color: antiquewhite;
+  }
+  .div-ex > div {
+    margin: 10px;
+    padding: 20px;
+    background-color: aqua;
+  }
+</style>
+</html>

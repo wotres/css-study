@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>transform</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p></p>
+</div>
+<div>
+  <div class="div-ex">
+    <div>div</div>
+    <div>div2</div>
+    <div>
+      <div class="front">
+        앞
+      </div>
+      <div class="back">
+        뒤
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex > div:first-child {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transform: rotate(45deg) scale(1.3);
+  }
+  .div-ex > div:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transform: perspective(150px) rotateX(45deg)
+  }
+  .div-ex > div:last-child {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  .div-ex > div:last-child > div {
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 300px;
+    position: absolute;
+    transition: 1s;
+    backface-visibility: hidden;
+  }
+  .div-ex > div:last-child > .front {
+    transform: rotateY(0deg);
+  }
+  .div-ex > div:last-child:hover > .front {
+    transform: rotateY(180deg);
+  }
+  .div-ex > div:last-child > .back {
+    transform: rotateY(-180deg);
+  }
+  .div-ex > div:last-child:hover > .back {
+    transform: rotate(0deg);
+  }
+</style>
+</html>

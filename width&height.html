@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>width & height</title>
+</head>
+<body>
+<div>
+  <h1>summary</h1>
+  <p>block 요소는 width 는 최대, height 는 컨텐츠 크기만큼 // 수직 </p>
+  <p>span 요소는 width/height 모두 컨텐츠 크기만큼 // 크기 지정 불가 // 수평 </p>
+</div>
+<div>
+  <div class="div-ex">
+    <div>div</div>
+    <div>div2</div>
+  </div>
+  <div class="span-ex">
+    <span>span</span>
+    <span>span2</span>
+  </div>
+</div>
+</body>
+<style>
+  .div-ex > div {
+    background-color: aqua;
+  }
+
+  .span-ex > span {
+    background-color: violet;
+  }
+</style>
+</html>

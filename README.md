@@ -117,6 +117,9 @@ div  .className {
 .btn:focus {
   color: red
 }
+.btn:active {
+  color: red
+}
 .btn:first-child {
   color: red;
 }
@@ -186,11 +189,11 @@ div {
 ```
 * 링크 방식(link 로 외부 css 문서 가져옴) (병렬 연결 => 한번에 link들 불러옴)
 ```html
-<link rel="stylesheet" href="./css/main.css>
+<link rel="stylesheet" href="./css/main.css">
 ```
 * import 방식: 다른 문서를 불러옴 (직렬 연결)
 ```css
-@import url("./temp.css");
+/*@import url("./temp.css");*/
 div {
   color: red;
 }
@@ -218,6 +221,111 @@ div { color: blue; }
 body { color: purple }
 
 ```
+
+## css 속성
+* html 은 Attributes / css와 js 는 properties
+* width/height
+  * auto(default 값 => 브라우저가 자동으로 너비 계산)
+* border
+  * border-width border-style border-color
+    * style 은 solid/dashed 등이 있음
+* box-sizing
+  * border-box => 요소의 내용 + padding + border 크기로 계산
+* overflow
+  * hidden : 넘친 내용 잘라냄
+* display
+  * block / inline / inline-block / flex
+* opacity
+  * 0 ~ 1
+* font-weight
+  * normal, 400
+  * bold, 700
+* line-height
+  * 한줄의 높이
+  * 숫자: 요소의 글꼴크기의 배수
+  * px, em, rem
+  * height 와 동일하게 지정하면 문자 세로 가운데
+* text-align
+  * center : 글자 중앙
+* text-decoration
+  * none : 선 장식 없음
+* text-indent
+  * 들여쓰기 가능
+    * px
+* background-position 으로 위치 지정(x축, y축)
+  * top left / 100px 100px
+* background-repeat 하나의 이미지만
+  * no-repeat
+* background-size
+  * cover 는 이미지가 넓은 부분에 맞춰짐
+  * contain 은 짧은 부분에 맞춰짐
+* position
+  * absolute 는 부모 요소를 기준
+    * relative or fixed 를 기준으로 배치
+    * 사용시 display 는 block 으로 변경
+  * relative 는 자신을 기준
+    * 요소가 원래위치해야하는 곳에서의 이동
+  * fixed
+    * 뷰포트 기준
+    * 사용시 display 는 block 으로 변경
+* z-index
+  * 숫자가 클수록 높게 쌓임
+* flex
+  * 수평정렬
+  * flex-direction 으로 방향
+  * flex-wrap 으로 넘침 요소 줄바꿈
+  * justify-content 으로 주축 정렬
+  * align-content 으로 교차축 정렬
+  * flex-grow: 증가 너비 비율
+    * 남은 부분을 나눈다.
+    * 내용물에 상관없이 너비를 할당하려면 flex-basis를 0으로 주고 할당한다.
+  * flex-basis: 내부 너비를 어느정도로 가져갈것인가
+* transition
+  * 전환 시간
+  * 속성명 지속시간 타이밍함수 대기시간
+  * transition-property
+    * 적용할 속성
+    * width 1s => width 에만 영향
+  * transition-duration
+    * 지속 시간
+  * transition-timing-function
+    * 타이밍
+    * ease / linear 와 같이 속도차이
+    * easing functions
+  * transition-delay
+    * 대기시
+* transform
+  * translate(x, y) : 이동
+  * scale(x, y) : 크기
+  * rotate(degree) : 각도
+  * skewX(x) : 기울임
+  * skeyY(y) : 기울임
+  * perspective(n : 원근법) / 항상 앞에 작성
+    * transform: perspective() 를 넣으면 자식요소에서 원근법(자식 중앙)
+    * perspective: 는 부모 속성에서 원근법(부모 중앙)
+* backface-visibility
+  * 3D 변환 뒷면 숨김여부
+
+## 단위
+* px: 픽셀
+* %: 상대적 백분율
+* em: 요소의 글꼴크기
+* rem: 루트 요소(html)의 글꼴 크기
+* vw: 뷰포트 가로 너비의 백분율
+* vh: 뷰포트 세로 너비의 백분율
+
+## 색상
+* 이름 지정: red
+* Hex(16진수) 색상 코드: #FFF
+* 빛의 삼원색(RGB): rgb(255, 255, 255)
+* 빛의 삼원색(RGB) + 투명도: rgb(255, 255, 255, 0.5)
+
+
+## CSS 전처리기(CSS Preprocessor)
+* Css 를 좀 더 쉽게 개발 할 수 있게 해줌
+* 웹서버가 인지할 수 있게 각 CSS 전처리기에 맞는 Compiler 를 사용
+* SASS, SCSS
+
 
 ## etc
 * label 로 input 을 감싸면 글자를 클릭해도 체크박스 클릭됨
