@@ -272,16 +272,6 @@ body { color: purple }
     * 사용시 display 는 block 으로 변경
 * z-index
   * 숫자가 클수록 높게 쌓임
-* flex
-  * 수평정렬
-  * flex-direction 으로 방향
-  * flex-wrap 으로 넘침 요소 줄바꿈
-  * justify-content 으로 주축 정렬
-  * align-content 으로 교차축 정렬
-  * flex-grow: 증가 너비 비율
-    * 남은 부분을 나눈다.
-    * 내용물에 상관없이 너비를 할당하려면 flex-basis를 0으로 주고 할당한다.
-  * flex-basis: 내부 너비를 어느정도로 가져갈것인가
 * transition
   * 전환 시간
   * 속성명 지속시간 타이밍함수 대기시간
@@ -307,6 +297,58 @@ body { color: purple }
     * perspective: 는 부모 속성에서 원근법(부모 중앙)
 * backface-visibility
   * 3D 변환 뒷면 숨김여부
+
+### flex vs grid
+* 레이아웃 => 웹요소를 올바른 장소에 배치하는 기술
+#### flex
+* 행 / 열 을 주축으로 웹 요소를 배치 및 정렬하는 1차원 레이아웃
+* flex
+  * 수평정렬
+  * flex-direction 으로 방향
+  * flex-wrap 으로 넘침 요소 줄바꿈
+  * justify-content 으로 주축 정렬
+  * align-content 으로 교차축 정렬
+  * flex-grow: 증가 너비 비율
+    * 남은 부분을 나눈다.
+    * 내용물에 상관없이 너비를 할당하려면 flex-basis를 0으로 주고 할당한다.
+  * flex-basis: 내부 너비를 어느정도로 가져갈것인가
+  * flex-shrink: 축소 비율
+    * 화면 줄어들때 더 줄어든다.
+  * align-content
+    * space-around 등 사용가능
+    * flex-wrap: wrap 일때 사용
+  * align-item
+    * flex-wrap: unwrap 일떄 사용
+#### grid
+* 격자 형태의 레이아웃을 만드는 2차원 레이아웃 
+* grid
+  * 행(row)과 열(column)이다
+  * grid-template-columns
+    * 열 트랙의 아이템 크기 결정
+    * auto-fill
+      * 컨텐츠의 최소값보다 크면 그자리는 비워둠
+    * auto-fit
+      * 컨텐츠의 최소값보다 크면 그자리에 컴텐츠 늘어남
+  * grid-template-rows
+  * grid-gap
+    * 간격을 지정하는 속성
+  * grid-row
+    * 1/3 => 1번부터 3번까지 row 차지하게함
+    * grid-row-start / grid-row-end 와 같음
+  * grid-template-areas
+    * 이름을 이용한 형태 정의
+  * align-items
+    * 트랙안에서의 배치
+  * align-self
+    * 아이템 스스로의 배치
+  * justify-items
+    * 트랙에서의 배치
+  * justify-self
+    * 아이템 스스로의 배치
+  * align-content
+    * 컨테이너에서의 배치
+  * justify-content
+    * 컨테이너에서의 배치
 
 ## 단위
 * px: 픽셀
